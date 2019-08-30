@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Quick Start - Leaflet</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <link rel="stylesheet" type="text/css" href="/snow_map/main/static/css/slider.css"/>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+
+
+
+    </head>
+    <body>
+        <div class="slider-div">
+            <div class="range">
+                <input type="range" min="1" max="7" steps="1" value="1">
+            </div>
+
+            <ul class="range-labels">
+                <li class="active selected">Today</li>
+                <li>Yesterday</li>
+                <li>2 days</li>
+                <li>3 days</li>
+                <li>4 days</li>
+                <li>5 days</li>
+                <li>6 days</li>
+            </ul>
+        </div>
+
+        <div class="container" style="margin: auto; padding: 10px">
+            <div id="mapid" style="width: 1620px; height: 750px;"></div>
+        </div>
+
+        <script>
+            var dblist = {{ database|safe }};
+        </script>
+
+        <script src="/snow_map/main/static/js/slider.js"></script>
+        <script src="/snow_map/main/static/js/test.js"></script>
+
+    </body>
+</html>
